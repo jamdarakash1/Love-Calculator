@@ -48,6 +48,17 @@ calcBtn.addEventListener("click", function (e) {
   if (yourName.value == theirName.value) {
     alert("Both Names Are Same Please Enter Different Name"); 
   }
+    e.preventDefault();
+  if (yourName.value == "Akanksha" && theirName.value=="Akash") {
+    alert("i Love You Soo Much Bochi Bubu....."); 
+  }
+  e.preventDefault();
+  if (yourName.value == "akanksha" && theirName.value=="akash") {
+    alert("I Love You Soo Much Bochi Bubu....."); 
+  }
+
+
+    
 
   //lovescore conditions
   else if (loveScore <= 10) {
