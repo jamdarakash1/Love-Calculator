@@ -154,16 +154,118 @@ outline: none;
   padding: 2px;
 }
 
+
 /* Responsive Codes */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  body {
+    font-size: 16px;
+  }
+  .wrapper {
+    padding: 50px 10px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .maincontent {
+    margin: 40px auto 20px auto;
+    display: grid;
+  }
+  .maincontent input {
+    margin: 20px 0;
+    width: 90%;
+    height: 30px;
+  }
 
+  .maincontent input:focus {
+    width: 100%;
+  }
 
-   
- 
+  button {
+    font-size: 16px;
+    padding: 15px 5%;
+  }
 
- 
+  .result {
+    width: 90%;
+    margin: 40px auto;
+  }
 
+  .divider {
+    width: 30%;
+  }
 
- 
+  #score {
+    font-size: 2rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .wrapper {
+    padding: 50px 10px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+
+  .maincontent {
+    margin: 50px auto 20px auto;
+    display: grid;
+  }
+  .maincontent input {
+    margin: 20px 0;
+    height: 30px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 15px 5%;
+  }
+
+  .result {
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  .divider {
+    width: 30%;
+  }
+
+  #score {
+    font-size: 2rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .wrapper {
+    padding: 50px 10px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+
+  .maincontent {
+    display: flex;
+  }
+  .maincontent input {
+    width: 300px;
+    margin: 20px;
+  }
+
+  .maincontent input:focus {
+    width: 350px;
+  }
+
+  .result {
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  .divider {
+    width: 30%;
+  }
 
   #score {
     font-size: 2rem;
